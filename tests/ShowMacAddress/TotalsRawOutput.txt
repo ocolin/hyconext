@@ -1,0 +1,8 @@
+  Total           :8
+  Static          :1
+  Dynamic         :7
+  Blackhole       :0
+  Sticky          :0
+  Security        :0
+  Snooping        :0
+  Valid           :8

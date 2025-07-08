@@ -1,0 +1,10 @@
+  MAC Address             Vlan/Vsi/BD         Interface               Oper-Type         Type
+  24:5a:4c:0e:fb:a9       1/--/--             2.5ge1/0/8              forward           dynamic
+  24:5a:4c:0e:fc:87       1/--/--             2.5ge1/0/5              forward           dynamic
+  24:5a:4c:0e:fc:af       1/--/--             2.5ge1/0/6              forward           dynamic
+  24:5a:4c:0e:ff:cd       1/--/--             2.5ge1/0/7              forward           dynamic
+  e8:80:88:52:7a:ef       1/--/--             10ge1/1/1               forward           dynamic
+  f4:1e:57:ce:65:e7       1/--/--             10ge1/1/1               forward           dynamic
+  f4:1e:57:ce:65:e8       1/--/--             10ge1/1/1               forward           dynamic
+  f4:1e:57:ce:65:e7       1/--/--             10ge1/1/1               forward           static
+MCOEBlanco.POESW#

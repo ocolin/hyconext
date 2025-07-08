@@ -1,0 +1,22 @@
+{
+    "name": "ocolin/hyconext",
+    "description": "Basic interface for Hyconext switch",
+    "require-dev": {
+        "phpunit/phpunit": "^12.2",
+        "phpstan/phpstan": "^2.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ocolin\\Hyconext\\": "src/",
+            "Ocolin\\Hyconext\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Colin Miller",
+            "email": "ocolin@cruzio.com"
+        }
+    ],
+    "require": {}
+}
