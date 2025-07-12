@@ -30,6 +30,14 @@ trait ShowMacAddressTrait
             throw new Exception( message: 'Error talking to switch.' );
         }
 
+        if( str_contains( $output, 'Connection refused' )) {
+            throw new Exception( message: "Connection refused to {$this->host}" );
+        }
+
+        if( !str_contains( $output, 'show mac-address' )) {
+            throw new Exception( message: "Unable to connect to {$this->host}" );
+        }
+
         return self::parse_Mac_Address( input: $output );
     }
 
@@ -40,9 +48,9 @@ trait ShowMacAddressTrait
 
     /**
      * @param string $input Raw string output of MAC address command.
-     * @return MacObject Object containing MAC totals, and list of MAC addresses.
+     * @return MacObject|null Object containing MAC totals, and list of MAC addresses.
      */
-    public static function parse_Mac_Address( string $input ) : MacObject
+    public static function parse_Mac_Address( string $input ) : MacObject|null
     {
         $obj = new MacObject();
         list( $junk, $raw ) = explode( separator: 'show mac-address', string: $input );
