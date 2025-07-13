@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "438ee25d3f89f964ae21242a5d6e1366",
-    "packages": [],
+    "content-hash": "28eb737e65122b8232c231b68e60df11",
+    "packages": [
+        {
+            "name": "ocolin/easysnmp",
+            "version": "2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ocolin/EasySNMP.git",
+                "reference": "83b0436bc6cdecbaa1f59250f8b81835645936a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ocolin/EasySNMP/zipball/83b0436bc6cdecbaa1f59250f8b81835645936a3",
+                "reference": "83b0436bc6cdecbaa1f59250f8b81835645936a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "ocolin/easyenv": "^2.0",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^12.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ocolin\\EasySNMP\\": "src/",
+                    "Ocolin\\EasySNMP\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Colin Miller",
+                    "email": "ocolin@cruzio.com"
+                }
+            ],
+            "description": "Bare bones SNMP library",
+            "support": {
+                "issues": "https://github.com/ocolin/EasySNMP/issues",
+                "source": "https://github.com/ocolin/EasySNMP/tree/2.1"
+            },
+            "time": "2025-05-09T19:20:53+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "myclabs/deep-copy",

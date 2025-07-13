@@ -18,5 +18,7 @@
             "email": "ocolin@cruzio.com"
         }
     ],
-    "require": {}
+    "require": {
+        "ocolin/easysnmp": "^2.1"
+    }
 }
