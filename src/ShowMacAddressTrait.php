@@ -84,12 +84,12 @@ trait ShowMacAddressTrait
         foreach( $array as $line )
         {
             $obj = new MacObject();
-            list( $mac, $vlan, $interface, $oper, $type) = (array)preg_split(
+            list( $mac, $vlan, $interface, $oper, $type ) = (array)preg_split(
                 pattern: '#\s+#', subject: trim( string: $line )
             );
             if( $mac ) { $obj->mac = strtoupper( string: $mac ); }
-            $obj->interface = $interface;
-            $obj->type      = $type;
+            $obj->interface = (string)$interface;
+            $obj->type      = (string)$type;
             if( $oper ) { $obj->operation = $oper; }
             if( $vlan ) {
                 list( $obj->vlan, $obj->vsi, $obj->bd ) = explode(
