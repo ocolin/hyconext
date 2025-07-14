@@ -12,7 +12,7 @@ class MacListObject
     public object $totals;
 
     /**
-     * @var array<object> List of MAC address objects.
+     * @var array<MacObject> List of MAC address objects.
      */
     public array $list;
 }
