@@ -7,12 +7,38 @@ namespace Ocolin\Hyconext;
 class MacObject
 {
     /**
-     * @var object Object of MAC type totals.
+     * @var string MAC address.
      */
-    public object $totals;
+    public string $mac;
 
     /**
-     * @var array<object> List of MAC address objects.
+     * @var string Switch interface MAC belongs to.
      */
-    public array $list;
+    public string $interface;
+
+    /**
+     * @var string Type of host (dynamic, static, etc))
+     */
+    public string $type;
+
+    /**
+     * @var string Operation of host (forwarding, etc).
+     */
+    public string $operation;
+
+    /**
+     * @var int|string VLAN host belongs to.
+     */
+    public int|string $vlan;
+
+    /**
+     * @var string Virtual Switch Interface;
+     */
+    public string $vsi;
+
+    /**
+     * @var string Broadcast Domain.
+     */
+    public string $bd;
+
 }

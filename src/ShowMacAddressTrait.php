@@ -13,10 +13,10 @@ trait ShowMacAddressTrait
 ----------------------------------------------------------------------------- */
 
     /**
-     * @return MacObject|null Object containing MAC totals and list of addresses.
+     * @return MacListObject|null Object containing MAC totals and list of addresses.
      * @throws Exception
      */
-    public function show_Mac_Address() : MacObject|null
+    public function show_Mac_Address() : MacListObject|null
     {
         $cmd = 'show mac-address';
         $script = __DIR__ . '/script.expect';
@@ -48,12 +48,12 @@ trait ShowMacAddressTrait
 
     /**
      * @param ?string $input Raw string output of MAC address command.
-     * @return MacObject|null Object containing MAC totals, and list of MAC addresses.
+     * @return MacListObject|null Object containing MAC totals, and list of MAC addresses.
      */
-    public static function parse_Mac_Address( ?string $input ) : MacObject|null
+    public static function parse_Mac_Address( ?string $input ) : MacListObject|null
     {
         if( $input === null ) { return null; }
-        $obj = new MacObject();
+        $obj = new MacListObject();
         list( $junk, $raw ) = explode( separator: 'show mac-address', string: $input );
 
         $raw = trim($raw);
@@ -83,7 +83,7 @@ trait ShowMacAddressTrait
 
         foreach( $array as $line )
         {
-            $obj = new stdClass();
+            $obj = new MacObject();
             list( $mac, $vlan, $interface, $oper, $type) = (array)preg_split(
                 pattern: '#\s+#', subject: trim( string: $line )
             );
