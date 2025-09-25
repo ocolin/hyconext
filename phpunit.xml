@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
-        bootstrap="./vendor/autoload.php"
+        bootstrap="./tests/bootstrap.php"
         colors="true"
         stopOnFailure="true"
         beStrictAboutChangesToGlobalState="true"
@@ -9,7 +9,9 @@
 >
     <testsuites>
         <testsuite name="tests">
-            <file>tests/ShowMacAddress/TestShowMacAddressStatic.php</file>
+<!--            <file>tests/ShowMacAddress/TestShowMacAddressStatic.php</file>-->
+<!--            <file>tests/MacListTest.php</file>-->
+            <file>tests/SNMPTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

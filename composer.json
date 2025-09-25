@@ -19,6 +19,8 @@
         }
     ],
     "require": {
-        "ocolin/easysnmp": "^2.1"
+        "ocolin/easysnmp": "^2.1",
+        "ocolin/easyenv": "^2.4",
+        "php": "^8.2"
     }
 }

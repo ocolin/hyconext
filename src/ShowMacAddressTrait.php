@@ -72,7 +72,7 @@ trait ShowMacAddressTrait
 
     /**
      * @param string $input String of mac list output.
-     * @return array<object> Array of MAC address objects.
+     * @return array<MacObject> Array of MAC address objects.
      */
     public static function parse_Mac_List( string $input ) : array
     {

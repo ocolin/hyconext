@@ -9,7 +9,6 @@ use Ocolin\EasySNMP\Errors\EasySnmpInvalidIpError;
 use Ocolin\EasySNMP\Errors\EasySnmpInvalidOidError;
 use Ocolin\EasySNMP\Errors\EasySnmpMissingCommunityError;
 use Ocolin\EasySNMP\SNMP AS EasySNMP;
-use stdClass;
 
 class SNMP
 {
@@ -60,6 +59,29 @@ class SNMP
     }
 
 
+/* GET SYSTEM DATA
+----------------------------------------------------------------------------- */
+
+    /**
+     * @return SystemObject System data for Switch
+     * @throws EasySnmpInvalidCmdError
+     * @throws EasySnmpInvalidOidError
+     */
+    public function get_System() : SystemObject
+    {
+        $data = $this->snmp->walk( oid: '.1.3.6.1.2.1.1' );
+
+        return new SystemObject(
+               descr: $data[0]->value, // @phpstan-ignore property.notFound
+                  id: $data[1]->value, // @phpstan-ignore property.notFound
+              uptime: $data[2]->value, // @phpstan-ignore property.notFound
+             contact: $data[3]->value, // @phpstan-ignore property.notFound
+                name: $data[4]->value, // @phpstan-ignore property.notFound
+            location: $data[5]->value, // @phpstan-ignore property.notFound
+        );
+    }
+
+
 
 /* PARSE THE RAW SNMP OUTPUT DATA INTO INTERFACE OBJECTS
 ----------------------------------------------------------------------------- */
@@ -92,5 +114,4 @@ class SNMP
 
         return $output;
     }
-
 }
