@@ -9,96 +9,96 @@ class InterfaceObject
     /**
      * @var string Interface Name.
      */
-    public string $ifName;
+    public string $Name;
 
     /**
      * @var string Interface Alias (label).
      */
-    public string $ifAlias;
+    public string $Alias;
 
     /**
      * @var int Interface Incoming 32bit Multicast Packets.
      */
-    public int $ifInMulticastPkts;
+    public int $InMulticastPkts;
 
     /**
      * @var int Interface Incoming 32bit Broadcast Packets.
      */
-    public int $ifInBroadcastPkts;
+    public int $InBroadcastPkts;
 
     /**
      * @var int Interface 32bit Outgoing Multicast Packets.
      */
-    public int $ifOutMulticastPkts;
+    public int $OutMulticastPkts;
 
     /**
      * @var int Interface 32bit Outgoing Broadcast Packets.
      */
-    public int $ifOutBroadcastPkts;
+    public int $OutBroadcastPkts;
 
     /**
      * @var int Interface 64bit Incoming Traffic (in octets)
      */
-    public int $ifHCInOctets;
+    public int $HCInOctets;
 
     /**
      * @var int  Interface 64bit Incoming Ucast Packets.
      */
-    public int $ifHCInUcastPkts;
+    public int $HCInUcastPkts;
 
     /**
      * @var int Interface 64bit Incoming Multicast Packets.
      */
-    public int $ifHCInMulticastPkts;
+    public int $HCInMulticastPkts;
 
     /**
      * @var int Interface 64bit Incoming Broadcast Packets.
      */
-    public int $ifHCInBroadcastPkts;
+    public int $HCInBroadcastPkts;
 
     /**
      * @var int  Interface 64bit Outgoing Traffic in octets.
      */
-    public int $ifHCOutOctets;
+    public int $HCOutOctets;
 
     /**
      * @var int Interface 64bit Outgoing Ucast packets.
      */
-    public int $ifHCOutUcastPkts;
+    public int $HCOutUcastPkts;
 
     /**
      * @var int Interface 64bit Outgoing Multicast Packets.
      */
-    public int $ifHCOutMulticastPkts;
+    public int $HCOutMulticastPkts;
 
     /**
      * @var int  Interface 64bit Outgoing Broadcast packets.
      */
-    public int $ifHCOutBroadcastPkts;
+    public int $HCOutBroadcastPkts;
 
     /**
      * @var int  Interface Link Up/Down Traps enabled.
      */
-    public int $ifLinkUpDownTrapEnable;
+    public int $LinkUpDownTrapEnable;
 
     /**
      * @var int  Interface 64bit Speed.
      */
-    public int $ifHighSpeed;
+    public int $HighSpeed;
 
     /**
      * @var int Interface Promiscuous Mode.
      */
-    public int $ifPromiscuousMode;
+    public int $PromiscuousMode;
 
     /**
      * @var int  Interface Connector Present.
      */
-    public int $ifConnectorPresent;
+    public int $ConnectorPresent;
 
     /**
      * @var int Interface Counter Discontinuity Time.
      */
-    public int $ifCounterDiscontinuityTime;
+    public int $CounterDiscontinuityTime;
 
 }

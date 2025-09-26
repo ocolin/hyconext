@@ -17,7 +17,7 @@ class SNMPTest extends testTest
 
         self::assertIsArray( $output );
         self::assertIsObject( $if );
-        self::assertObjectHasProperty( 'ifAlias', $if );
+        self::assertObjectHasProperty( 'Alias', $if );
     }
 
 
