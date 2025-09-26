@@ -20,6 +20,7 @@ class SNMPTest extends testTest
         self::assertObjectHasProperty( 'ifAlias', $if );
     }
 
+
     public function testSystem() : void
     {
         //get_System

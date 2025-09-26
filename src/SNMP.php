@@ -106,7 +106,13 @@ class SNMP
                     $output[$index] = new InterfaceObject();
                 }
 
+                if( $name === 'ifAlias' ) {
+                    $object->value = stripslashes( $object->value );
+                    $object->value = trim( string: $object->value, characters: '"' );
+                }
+
                 if( is_numeric( $object->value )){ $object->value = (int)$object->value; }
+                $name = preg_replace( pattern: "#^if#", replacement: '', subject: $name );
 
                 $output[$index]->{$name} = $object->value;
             }
