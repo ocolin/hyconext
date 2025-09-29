@@ -41,4 +41,8 @@ class MacObject
      */
     public string $bd;
 
+    /**
+     * @var string Optional vendor field.
+     */
+    public string $vendor;
 }
