@@ -4,6 +4,8 @@ declare( strict_types = 1 );
 namespace Ocolin\Hyconext;
 
 use Exception;
+use Ocolin\Hyconext\Objects\MacListObject;
+use Ocolin\Hyconext\Objects\MacObject;
 use stdClass;
 
 trait ShowMacAddressTrait
@@ -18,22 +20,7 @@ trait ShowMacAddressTrait
      */
     public function show_Mac_Address() : MacListObject|null
     {
-        $cmd = 'show mac-address';
-        $script = __DIR__ . '/script.expect';
-        $args = "'{$this->host}' '{$this->user}' '{$this->pass}' '{$cmd}'";
-
-        $output = shell_exec(
-            command: "{$this->expect} {$script} {$args}",
-        );
-
-        if( $output === false OR $output === null ) {
-            throw new Exception( message: 'Error talking to switch.' );
-        }
-
-        if( str_contains( $output, 'Connection refused' )) {
-            throw new Exception( message: "Connection refused to {$this->host}" );
-        }
-
+        $output = $this->command( cmd: 'show mac-address' );
         if( !str_contains( $output, 'show mac-address' )) {
             throw new Exception( message: "Unable to connect to {$this->host}" );
         }

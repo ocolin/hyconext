@@ -41,6 +41,43 @@ class API
     }
 
 use ShowMacAddressTrait;
+use ShowInterfaceTrait;
+use ShowPoeTrait;
+
+
+/*
+----------------------------------------------------------------------------- */
+
+    /**
+     * @param string $cmd CLI command to run.
+     * @return string Switch output text.
+     * @throws Exception
+     */
+    public function command( string $cmd ) : string
+    {
+        $script = __DIR__ . '/script.expect';
+        $args = "'{$this->host}' '{$this->user}' '{$this->pass}' '{$cmd}'";
+
+        $output = shell_exec(
+            command: "{$this->expect} {$script} {$args}",
+        );
+
+        if( $output === false OR $output === null ) {
+            throw new Exception( message: 'Error talking to switch.' );
+        }
+
+        if( str_contains( $output, 'Connection refused' )) {
+            throw new Exception( message: "Connection refused to {$this->host}" );
+        }
+
+        /*
+        if( !str_contains( $output, 'show mac-address' )) {
+            throw new Exception( message: "Unable to connect to {$this->host}" );
+        }
+        */
+
+        return $output;
+    }
 
 /* FORMAT BINARY PATH
 ----------------------------------------------------------------------------- */

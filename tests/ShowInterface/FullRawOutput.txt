@@ -1,0 +1,51 @@
+spawn ssh -o ConnectTimeout=5 -o StrictHostKeyChecking=no admin@10.35.3.2
+admin@10.35.3.2's password: 
+
+User Access Verification
+
+877Cedar.POESW#terminal length 0
+877Cedar.POESW#show interface
+  Interface         State(a/o)  Mode      Descr
+  2.5ge1/0/1        up/up       bridge    877Cedar-903Pacific
+  2.5ge1/0/2        up/up       bridge    877Cedar-133Mission
+  2.5ge1/0/3        up/up       bridge    877Cedar-1543Pacific
+  2.5ge1/0/4        up/up       bridge    877Cedar-LandTrustSC
+  2.5ge1/0/5        up/down     bridge    877Cedar-701Ocean_POE
+  2.5ge1/0/6        up/up       bridge    877Cedar-SCArtsCenter
+  2.5ge1/0/7        up/up       bridge    877Cedar-SCPL
+  2.5ge1/0/8        up/up       bridge    877Cedar-SCPL_NEW
+  2.5ge1/0/9        up/down     bridge    -
+  2.5ge1/0/10       up/down     bridge    -
+  2.5ge1/0/11       up/down     bridge    -
+  2.5ge1/0/12       up/down     bridge    -
+  2.5ge1/0/13       up/down     bridge    -
+  2.5ge1/0/14       up/down     bridge    -
+  2.5ge1/0/15       up/down     bridge    -
+  2.5ge1/0/16       up/up       bridge    Tarana RN Testing
+  10ge1/1/1         up/up       bridge    "Uplink to 877Cedar.POP"
+  10ge1/1/2         up/down     bridge    -
+  10ge1/1/3         up/down     bridge    -
+  10ge1/1/4         up/down     bridge    -
+  10ge1/1/5         up/down     bridge    -
+  10ge1/1/6         up/down     bridge    -
+  vlan1             up/up       router    -
+  vlan10            up/up       router    "877Cedar Local Device MGMT"
+  vlan86            up/up       router    Testing VLAN
+  vlan204           up/up       router    "877Cedar-903Pacific MGMT"
+  vlan205           up/up       router    "877Cedar-903Pacific DATA"
+  vlan206           up/up       router    "877Cedar-133Mission MGMT"
+  vlan207           up/up       router    "877Cedar-133Mission DATA"
+  vlan208           up/up       router    "877Cedar-LandTrustSC MGMT"
+  vlan209           up/up       router    "877Cedar-LandTrustSC DATA"
+  vlan210           up/up       router    "877Cedar-SCPL MGMT"
+  vlan211           up/up       router    "877Cedar-SCPL DATA"
+  vlan212           up/down     router    "877Cedar-701Ocean MGMT"
+  vlan213           up/down     router    "877Cedar-701Ocean DATA"
+  vlan214           up/up       router    "877Cedar-1543Pacific MGMT"
+  vlan215           up/up       router    "877Cedar-1543Pacific DATA"
+  vlan216           up/up       router    "877Cedar-SCArtsCenter MGMT"
+  vlan217           up/up       router    "877Cedar-SCArtsCenter DATA"
+  vlan218           up/up       router    877Cedar-SCPL MGMT NEW
+  vlan219           up/up       router    877Cedar-SCPL DATA NEW
+  loopback0         up/up       router    -
+877Cedar.POESW#

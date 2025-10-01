@@ -10,8 +10,10 @@
     <testsuites>
         <testsuite name="tests">
 <!--            <file>tests/ShowMacAddress/TestShowMacAddressStatic.php</file>-->
-<!--            <file>tests/MacListTest.php</file>-->
-            <file>tests/SNMPTest.php</file>
+<!--            <file>tests/ShowInterface/InterfaceTest.php</file>-->
+<!--            <file>tests/ShowPoe/PoeTest.php</file>-->
+            <file>tests/ApiTest.php</file>
+<!--            <file>tests/SNMPTest.php</file>-->
         </testsuite>
     </testsuites>
 </phpunit>

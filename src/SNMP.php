@@ -8,7 +8,9 @@ use Ocolin\EasySNMP\Errors\EasySnmpInvalidCmdError;
 use Ocolin\EasySNMP\Errors\EasySnmpInvalidIpError;
 use Ocolin\EasySNMP\Errors\EasySnmpInvalidOidError;
 use Ocolin\EasySNMP\Errors\EasySnmpMissingCommunityError;
-use Ocolin\EasySNMP\SNMP AS EasySNMP;
+use Ocolin\EasySNMP\SNMP as EasySNMP;
+use Ocolin\Hyconext\Objects\InterfaceSnmpObject;
+use Ocolin\Hyconext\Objects\SystemObject;
 
 class SNMP
 {
@@ -47,7 +49,7 @@ class SNMP
 ----------------------------------------------------------------------------- */
 
     /**
-     * @return InterfaceObject[]
+     * @return InterfaceSnmpObject[]
      * @throws EasySnmpInvalidCmdError
      * @throws EasySnmpInvalidOidError
      */
@@ -88,7 +90,7 @@ class SNMP
 
     /**
      * @param array<object> $raw Raw table output from EasySNMP
-     * @return InterfaceObject[] Array of formatted interfaces.
+     * @return InterfaceSnmpObject[] Array of formatted interfaces.
      */
     public static function parse_Interfaces( array $raw ) : array
     {
@@ -103,7 +105,7 @@ class SNMP
             ) {
                 list( $name, $index ) = explode( separator: '.', string: $object->oid );
                 if( !array_key_exists( key: $index, array: $output )) {
-                    $output[$index] = new InterfaceObject();
+                    $output[$index] = new InterfaceSnmpObject();
                 }
 
                 if( $name === 'ifAlias' ) {

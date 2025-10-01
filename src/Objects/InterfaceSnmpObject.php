@@ -2,9 +2,9 @@
 
 declare( strict_types = 1 );
 
-namespace Ocolin\Hyconext;
+namespace Ocolin\Hyconext\Objects;
 
-class InterfaceObject
+class InterfaceSnmpObject
 {
     /**
      * @var string Interface Name.
