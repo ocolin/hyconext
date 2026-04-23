@@ -4,6 +4,6 @@ declare( strict_types = 1 );
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Ocolin\EasyEnv\LoadEnv;
+use Ocolin\EasyEnv\Env;
 
-new LoadEnv( files: __DIR__ . '/../.env', append: true );
+Env::load( files: __DIR__ . '/../.env', append: true );

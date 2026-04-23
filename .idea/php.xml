@@ -41,6 +41,7 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/ocolin/easysnmp" />
       <path value="$PROJECT_DIR$/vendor/ocolin/easyenv" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/git-state" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

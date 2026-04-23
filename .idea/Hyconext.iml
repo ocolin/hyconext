@@ -33,6 +33,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ocolin/easysnmp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ocolin/easyenv" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/git-state" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
