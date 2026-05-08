@@ -38,7 +38,6 @@ Built on top of [ocolin/EasySNMP](https://github.com/ocolin/EasySNMP) for SNMP a
 - PHP 8.4 or higher
 - `ext-openssl`
 - `ext-gmp`
-- `expect` binary (for SSH MAC table retrieval — `sudo apt install expect` on Debian/Ubuntu)
 
 ---
 
