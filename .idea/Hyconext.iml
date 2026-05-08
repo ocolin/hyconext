@@ -3,7 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Ocolin\Hyconext\" />
-      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" packagePrefix="Ocolin\Hyconext\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Ocolin\Hyconext\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
@@ -34,6 +35,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/ocolin/easysnmp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ocolin/easyenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/git-state" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/freedsx/asn1" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/freedsx/snmp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/freedsx/socket" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ocolin/global-type" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpseclib/phpseclib" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
