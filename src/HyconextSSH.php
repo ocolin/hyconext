@@ -6,6 +6,7 @@ namespace Ocolin\Hyconext;
 
 use Exception;
 use Ocolin\Hyconext\Traits\SSH\MacTableTrait;
+use Ocolin\Hyconext\Traits\SSH\PortTrait;
 use phpseclib3\Net\SSH2;
 use RuntimeException;
 
@@ -17,6 +18,7 @@ class HyconextSSH
     private SSH2 $ssh;
 
     use MacTableTrait;
+    use PortTrait;
 
 
 /* CONSTRUCTOR

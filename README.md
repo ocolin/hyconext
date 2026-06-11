@@ -252,6 +252,7 @@ Default: All columns
 | Method | Returns | Description |
 |--------|---------|-------------|
 | `getMacTable()` | `MacTable` | MAC address table |
+| `getPorts()` | `Port` | List of interface ports |
 
 ---
 
@@ -259,18 +260,14 @@ Default: All columns
 
 ### Port
 
-Returned by `getInterfaces()`. All properties except `index` are nullable depending on requested columns.
+Returned by `getPorts()`. 
 
 ```php
-$port->index;        // int     - Interface index
-$port->name;         // ?string - Interface name (e.g. 2.5GigaEthernet1/0/1)
-$port->alias;        // ?string - Admin description (e.g. 877Cedar-903Pacific)
-$port->operStatus;   // ?int    - Raw operational status (1=up, 2=down)
-$port->adminStatus;  // ?int    - Raw admin status (1=up, 2=down)
-$port->speed;        // ?int    - Speed in bps
-$port->highSpeed;    // ?int    - Speed in Mbps
-$port->inHcOctets;   // ?int    - 64-bit input bytes
-$port->outHcOctets;  // ?int    - 64-bit output bytes
+$port->interface;   // Name of the interface port.
+$port->adminStatus; // Administrative status.
+$port->operStatus;  // Operational status.
+$port->mode;        // Interface mode.
+$port->description; // Description of port
 ```
 
 ### Poe
