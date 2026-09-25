@@ -31,7 +31,7 @@ trait PortTrait
         $output = [];
         foreach( $rows as $row )
         {
-            $columns = preg_split( pattern: "#\s+#", subject: trim( $row ) );
+            $columns = preg_split( pattern: "#\s+#", subject: trim( $row ), limit: 4 );
             if( $columns === false || count( $columns ) < 4 ) { continue; }
 
             $status = explode( separator: '/', string: $columns[1] );
